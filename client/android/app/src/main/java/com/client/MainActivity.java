@@ -1,4 +1,4 @@
-package com.client2;
+package com.client;
 
 import android.os.Build;
 import android.os.Bundle;
