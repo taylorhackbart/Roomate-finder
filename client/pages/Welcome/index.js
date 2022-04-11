@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ScrollView, StyleSheet } from "react-native";
-import { Button, Card } from "react-native-paper";
+import { Button, Card, TextInput } from "react-native-paper";
 import { DefaultTheme } from "react-native-paper";
 
 function HomeScreen({ navigation }) {
@@ -13,6 +13,7 @@ function HomeScreen({ navigation }) {
     });
   });
   return (
+    <>
     <ScrollView style={styles.scrollView}>
       <Card style={styles.card}>
         <Card.Title title={`Navigation Count: ${counter}`} />
@@ -64,6 +65,15 @@ function HomeScreen({ navigation }) {
         </Card.Content>
       </Card>
     </ScrollView>
+    <Card style={styles.card}>
+    <Card.Title title="Navigate to 'Back' Screen" />
+    <Card.Content>
+        <Button mode="contained" onPress={() => navigation.navigate('Back')}>
+            Navigate
+    	</Button>
+    </Card.Content>
+</Card>
+</>
   );
 }
 

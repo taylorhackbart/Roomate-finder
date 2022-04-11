@@ -3,9 +3,14 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Provider as PaperProvider } from "react-native-paper";
+import {
+  Provider as PaperProvider,
+  IconButton,
+  DefaultTheme,
+} from "react-native-paper";
 import HomeScreen from "./pages/Welcome/index.js";
 import BookScreen from "./pages/Welcome/BookScreen";
+import BackScreen from "./pages/Welcome/BackScreen";
 import NameScreen from "./pages/Welcome/NameScreen";
 import TitleScreen from "./pages/Welcome/Title";
 
@@ -32,11 +37,13 @@ export default function App() {
             />
             <Stack.Screen name="Book" component={BookScreen} />
             <Stack.Screen name="Name" component={NameScreen} />
+
             <Stack.Screen
               name="Title"
               component={TitleScreen}
               options={({ route }) => ({ title: route.params.title })}
             />
+            <Stack.Screen name="Back" component={BackScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </PaperProvider>
@@ -49,7 +56,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    alignItems: "center",
+    // alignItems: "center",
     justifyContent: "center",
   },
 });
