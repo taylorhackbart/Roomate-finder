@@ -1,24 +1,29 @@
-import React from "react";
-import {Text, View, StyleSheet} from "react-native"
-import AppButton from "../../components/AppButton"
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-const Stack = createStackNavigator();
-function Login() {
-  return (
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Card } from 'react-native-paper';
+import { DefaultTheme } from 'react-native-paper';
 
+function Login () {
+  return (
     <View style={styles.container}>
-  <Text> Made it</Text>
+      <Card style={styles.card}>
+        <Card.Title title="This is Login Screen" />
+      </Card>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: 'column',
+    backgroundColor: DefaultTheme.colors.background,
     alignItems: 'center',
-    justifyContent: 'center',
-
+    paddingTop: 10
   },
-})
+  card: {
+    width: '90%'
+  }
+});
+
 export default Login;

@@ -16,17 +16,23 @@ function HomeScreen({ navigation }) {
     <>
     <ScrollView style={styles.scrollView}>
       <Card style={styles.card}>
-        <Card.Title title={`Navigation Count: ${counter}`} />
+        <Card.Title title="Welcome!" />
       </Card>
       <Card style={styles.card}>
-        <Card.Title title="Navigate to 'Book' Screen" />
         <Card.Content>
-          <Button mode="contained" onPress={() => navigation.navigate("Book")}>
-            Navigate
+          <Button mode="contained" onPress={() => navigation.navigate("Login")}>
+            Login
           </Button>
         </Card.Content>
       </Card>
       <Card style={styles.card}>
+        <Card.Content>
+          <Button mode="contained" onPress={() => navigation.navigate("Register")}>
+            Register
+          </Button>
+        </Card.Content>
+      </Card>
+      {/* <Card style={styles.card}>
         <Card.Title title="Navigate with Parameters" />
         <Card.Content>
           <TextInput
@@ -64,7 +70,6 @@ function HomeScreen({ navigation }) {
           </Button>
         </Card.Content>
       </Card>
-    </ScrollView>
     <Card style={styles.card}>
     <Card.Title title="Navigate to 'Back' Screen" />
     <Card.Content>
@@ -72,7 +77,8 @@ function HomeScreen({ navigation }) {
             Navigate
     	</Button>
     </Card.Content>
-</Card>
+</Card> */}
+    </ScrollView>
 </>
   );
 }

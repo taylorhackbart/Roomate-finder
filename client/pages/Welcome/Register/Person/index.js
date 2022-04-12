@@ -3,7 +3,7 @@ import { StyleSheet, View } from "react-native";
 import { Card, Button } from "react-native-paper";
 import { DefaultTheme } from "react-native-paper";
 
-function Register({navigation}) {
+function Person({navigation}) {
   return (
     <View style={styles.container}>
       <Card style={styles.card}>
@@ -15,7 +15,7 @@ function Register({navigation}) {
             mode="contained"
             onPress={() => navigation.navigate("Person")}
           >
-            Fill a room
+            Filters
           </Button>
         </Card.Content>
       </Card>
@@ -25,7 +25,7 @@ function Register({navigation}) {
             mode="contained"
             onPress={() => navigation.navigate("Housing")}
           >
-            Find a room
+            Filters
           </Button>
         </Card.Content>
       </Card>
@@ -46,4 +46,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Register;
+export default Person;

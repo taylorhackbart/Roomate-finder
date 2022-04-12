@@ -9,10 +9,13 @@ import {
   DefaultTheme,
 } from "react-native-paper";
 import HomeScreen from "./pages/Welcome/index.js";
-import BookScreen from "./pages/Welcome/BookScreen";
+import Login from "./pages/Welcome/Login";
+import Register from "./pages/Welcome/Register/Register";
 import BackScreen from "./pages/Welcome/BackScreen";
 import NameScreen from "./pages/Welcome/NameScreen";
 import TitleScreen from "./pages/Welcome/Title";
+import Housing from "./pages/Welcome/Register/Housing";
+import Person from "./pages/Welcome/Register/Person";
 
 const Stack = createNativeStackNavigator();
 
@@ -35,9 +38,11 @@ export default function App() {
                 ),
               }}
             />
-            <Stack.Screen name="Book" component={BookScreen} />
+            <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Name" component={NameScreen} />
-
+            <Stack.Screen name="Register" component={Register} />
+            <Stack.Screen name="Person" component={Person} />
+            <Stack.Screen name="Housing" component={Housing} />
             <Stack.Screen
               name="Title"
               component={TitleScreen}
